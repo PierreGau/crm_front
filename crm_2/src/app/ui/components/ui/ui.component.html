@@ -1,9 +1,12 @@
 <div class="d-flex flex-column ui">
   <header>
     <ng-content select=".tr-header"></ng-content>
+    <span (click)="toggle()">
+      <ng-content select=".tr-button"></ng-content>
+    </span>
   </header>
   <main class="d-flex flex-grow-1">
-    <aside>
+    <aside [ngClass]="{'close-aside': close}">
       <nav>
         <ng-content select=".tr-nav"></ng-content>
       </nav>
