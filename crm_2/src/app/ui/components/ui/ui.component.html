@@ -5,7 +5,6 @@
       <!--Syntaxe if + if-->
       <ng-content *ngIf="close" select=".tr-button-open"></ng-content>
       <ng-content *ngIf="!close" select=".tr-button-close"></ng-content>
-
       <!-- syntaxe ngif then else -->
       <!-- <ng-container *ngIf="close; then thenBlock else elseBlock"></ng-container>
 
@@ -26,7 +25,7 @@
     </aside>
     <div class="d-flex flex-column flex-grow-1">
       <div class="flex-grow-1 content">
-        content
+        <ng-content select=".tr-content"></ng-content>
       </div>
       <footer>
         <ng-content select=".tr-footer"></ng-content>
