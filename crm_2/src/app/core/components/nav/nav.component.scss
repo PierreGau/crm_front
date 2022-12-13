@@ -1,4 +1,15 @@
-p
+.active
 {
-    margin-top: 10px;;
+    background : rgba($color: #5d5858, $alpha: 1.0);
+    color: white;
+}
+
+.home
+{
+    background : rgba($color: #024979, $alpha: 1.0);
+    color: white;
+}
+
+a{
+    color : rgba($color: #024979, $alpha: 1.0);
 }
