@@ -15,11 +15,8 @@ export class AppComponent {
   private sbj: Subject<any>;
 
   private behave: BehaviorSubject<any>;
-  private event: Event;
-
   constructor() {
     this.title = 'oui';
-    this.event = new Event('Suppression');
 
     //--------- Observable froid ---------
     this.obs = new Observable<any>((listXSubscribers) => {
