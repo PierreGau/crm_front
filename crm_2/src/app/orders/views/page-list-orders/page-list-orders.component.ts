@@ -9,9 +9,20 @@ import { OrdersService } from 'src/app/core/services/orders.service';
 })
 export class PageListOrdersComponent {
   public collection!: Order[];
+  public headers: string[];
   constructor(private ordersService: OrdersService) {
     this.ordersService.collection.subscribe((data) => {
       this.collection = data;
     });
+
+    this.headers = [
+      'Type',
+      'Description',
+      'Durée',
+      'Prix',
+      'Total HT',
+      'Total TTC',
+      'Etat',
+    ];
   }
 }

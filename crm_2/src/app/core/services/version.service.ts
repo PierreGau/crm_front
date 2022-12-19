@@ -6,7 +6,12 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class VersionService {
   public version: BehaviorSubject<number>;
+
   constructor() {
     this.version = new BehaviorSubject<number>(1);
+  }
+
+  public increment(): void {
+    this.version.next(this.version.value + 1);
   }
 }
