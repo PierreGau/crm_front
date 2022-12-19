@@ -4,9 +4,9 @@
       <td>{{ item.type_presta |uppercase}}</td>
       <td>{{ item.designation }}</td>
       <td>{{ item.nb_days }}</td>
-      <td>{{ item.unit_price }}</td>
-      <td>{{ item.unit_price |total: item.nb_days }}</td>
-      <td>{{ item.unit_price |total: item.nb_days: 1.2 }}</td>
+      <td>{{ item.unit_price |currency }}</td>
+      <td>{{ item.unit_price |total: item.nb_days |currency }}</td>
+      <td>{{ item.unit_price |total: item.nb_days: 1.2 |currency }}</td>
       <td>{{ item.state }}</td>
     </tr>
   </app-table-light>
